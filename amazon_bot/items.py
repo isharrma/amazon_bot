@@ -7,6 +7,8 @@ import scrapy
 
 
 class AmazonBotItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+    book_name = scrapy.Field()
+    book_author = scrapy.Field()
+    book_price = scrapy.Field()
+    imagelink = scrapy.Field()
     pass
