@@ -10,8 +10,9 @@ class AmazonSpiderSpider(scrapy.Spider):
         items = AmazonBotItem()
 
         #.extract() = .getall()
-        book_name = response.css('.a-size-medium::text').extract()            
-        book_author = response.css('.sg-col-12-of-28 .a-size-base+ .a-size-base').css('::text').extract() 
+        book_name = response.css('.a-size-medium::text').extract()  
+        book_author = response.xpath('normalize-space(//a[@class="a-size-base a-link-normal"]/text())').extract()       
+        #book_author = response.css('normalize-space(.sg-col-12-of-28 .a-size-base+ .a-size-base)').css('::text').extract()
         book_price = response.css('.sg-col-20-of-28 .a-spacing-top-small .a-price-whole').css('::text').extract()
             #extra css as the above are using multiple html classes to extract 
         imagelink = response.css('.s-image-fixed-height .s-image').css('::attr(src)').extract()
