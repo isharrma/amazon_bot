@@ -6,7 +6,7 @@ Book Price
 Book Author
 Book's Image link
 
-#Technology Used
+# Technology Used
 The technology used to code this crawler are :
 VSCode
 Python
