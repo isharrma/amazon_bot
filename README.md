@@ -1,4 +1,4 @@
-# amazon_bot
+# Amazon Spider
 
 A spider to crawl through books section of amazon.in and store the following:
 Book Name
